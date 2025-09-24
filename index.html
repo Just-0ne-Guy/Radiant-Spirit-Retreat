@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Radiant Spirit Retreat</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/e3243c9da6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/e3243c9da6.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
   </head>
   <body>
@@ -40,7 +43,7 @@
               <li>
                 <a
                   class="nav__link link__hover-effect link__hover-effect--black"
-                  href=""
+                  onclick="toggleModal()"
                   >Contact Us</a
                 >
               </li>
@@ -53,7 +56,60 @@
           <div class="header__desc">
             <h1 class="header__title">Radiant Spirit Retreat</h1>
             <p class="header__desc--para">a sanctuary for the soul</p>
-            <button class="btn header__btn">begin your journey</button>
+            <button class="btn header__btn" onclick="toggleModal()">
+              begin your journey
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">Find Yourself</h3>
+
+          <p class="modal__para">
+            step into a quiet space designed for reflection and renewal. this
+            retreat invites you to pause, breathe, and reconnect with what
+            matters most. whether you join for a single session or a full
+            weekend, every moment is crafted to help you find balance and carry
+            a sense of calm back into daily life.
+          </p>
+        </div>
+        <div class="modal__half modal__contact">
+          <i
+            class="fa-solid fa-xmark modal__exit click"
+            onclick="toggleModal()"
+          ></i>
+          <h3 class="modal__title modal__title--contact">
+            Walk the path with us
+          </h3>
+
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" required />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea
+                class="input"
+                name="message"
+                type="text"
+                required
+              ></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              come home to yourself
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon.
           </div>
         </div>
       </div>
@@ -68,7 +124,7 @@
           <h4 class="section__tag">ABOUT</h4>
           <p class="section__para">
             Radiant Spirit Retreat was created as a gentle refuge for those
-            seeking peace, clarity, and connection. nestled in nature’s quiet
+            seeking peace, clarity, and connection. nestled in nature`s quiet
             embrace, we offer space to slow down, breathe deeply, and come home
             to yourself. whether through mindful movement, healing rituals, or
             simply stillness.. you are welcome here, just as you are.
@@ -119,7 +175,9 @@
                 <h3 class="event__title">Random Mountain</h3>
                 <p class="event__para">Month 20 - 23 Location</p>
                 <p class="event__focus">Reconect, Release, Receive.</p>
-                <button class="event__btn btn">reserve your space</button>
+                <a href="#">
+                  <button class="event__btn btn" onclick="toggleModal()">reserve your space</button>
+                </a>
               </div>
             </div>
             <div class="event">
@@ -130,7 +188,9 @@
                 <h3 class="event__title">Random Mountain</h3>
                 <p class="event__para">Month 20 - 23 Location</p>
                 <p class="event__focus">Reconect, Release, Receive.</p>
-                <button class="event__btn btn">reserve your space</button>
+                <a href="#">
+                  <button class="event__btn btn" onclick="toggleModal()">reserve your space</button>
+                </a>
               </div>
             </div>
             <div class="event">
@@ -141,7 +201,9 @@
                 <h3 class="event__title">Random Mountain</h3>
                 <p class="event__para">Month 20 - 23 Location</p>
                 <p class="event__focus">Reconect, Release, Receive.</p>
-                <button class="event__btn btn">reserve your space</button>
+                <a href="#">
+                  <button class="event__btn btn" onclick="toggleModal()">reserve your space</button>
+                </a>
               </div>
             </div>
             <div class="event">
@@ -152,7 +214,9 @@
                 <h3 class="event__title">Random Mountain</h3>
                 <p class="event__para">Month 20 - 23 Location</p>
                 <p class="event__focus">Reconect, Release, Receive.</p>
-                <button class="event__btn btn">reserve your space</button>
+                <a href="#">
+                  <button class="event__btn btn" onclick="toggleModal()">reserve your space</button>
+                </a>
               </div>
             </div>
           </div>
@@ -195,7 +259,11 @@
       <div class="row footer__row">
         <a href="#" class="footer__anchor">
           <figure class="footer__img--wrapper">
-            <img class="footer__logo--img" src="./assets/ChatGPT Image Sep 24, 2025, 03_30_17 AM.png" alt="" />
+            <img
+              class="footer__logo--img"
+              src="./assets/ChatGPT Image Sep 24, 2025, 03_30_17 AM.png"
+              alt=""
+            />
           </figure>
           <span class="footer__logo--popper">
             Top
@@ -210,15 +278,20 @@
           <a class="link__hover-effect link__hover-effect--white" href="#events"
             >Events</a
           >
-          <a class="link__hover-effect link__hover-effect--white" href="#"
+          <a
+            class="link__hover-effect link__hover-effect--white"
+            href="#"
+            onclick="toggleModal()"
             >Join</a
           >
-          <a class="link__hover-effect link__hover-effect--white" href="#"
+          <a
+            class="link__hover-effect link__hover-effect--white"
+            href="#"
+            onclick="toggleModal()"
             >Contact Us</a
           >
         </div>
         <div class="footer__copyright">Copyright © 2025 Christian Maffei</div>
-
       </div>
     </footer>
   </body>
