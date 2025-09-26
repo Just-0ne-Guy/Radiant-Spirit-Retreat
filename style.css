@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: #f5ede0;
+  background-color: #BFD8C0;
 }
 
 main {
@@ -245,6 +245,7 @@ nav,
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
+  filter: grayscale(100%);
 }
 
 
