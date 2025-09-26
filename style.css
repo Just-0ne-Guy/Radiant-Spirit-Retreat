@@ -259,11 +259,11 @@ nav,
 
 
 .title__img {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 350px;
+    left: 450px;
     top: 120px;
     padding: 0;
     width: 100%;
